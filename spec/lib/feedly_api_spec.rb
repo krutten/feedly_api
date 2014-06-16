@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe FeedlyApi::Client do
-  let(:auth_token) { ENV['FEEDLY_TOKEN']   || 'GREATE_AUTH_TOKEN' }
-  let(:user_id)    { ENV['FEEDLY_USER_ID'] || '00000000-000-NOT-VALID-a29b6679bb3c' }
-  let(:client)     { FeedlyApi::Client.new auth_token }
+  let(:access_token) { ENV['FEEDLY_TOKEN']   || 'GREATE_AUTH_TOKEN' }
+  let(:user_id)      { ENV['FEEDLY_USER_ID'] || '00000000-000-NOT-VALID-a29b6679bb3c' }
+  let(:client)       { FeedlyApi::Client.new access_token }
 
   describe '#new' do
     before :each do
@@ -11,8 +11,8 @@ describe FeedlyApi::Client do
     end
 
     it 'creates Client object with given token' do
-      client = FeedlyApi::Client.new auth_token
-      expect(client.auth_token).to eq auth_token
+      client = FeedlyApi::Client.new access_token
+      expect(client.access_token).to eq access_token
     end
 
     it 'saves user_id' do

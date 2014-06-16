@@ -4,6 +4,7 @@ require 'feedly_api/version'
 require 'feedly_api/errors'
 require 'feedly_api/client'
 require 'feedly_api/feed'
+require 'feedly_api/api/authentication'
 
 module FeedlyApi
   # A Ruby client library for Feedly Reader
