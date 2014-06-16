@@ -4,11 +4,6 @@ feedly_api
 
 Early unofficial Feedly API with no external dependencies
 
-## Limitations
-* no auth for now
-* get methods only
-* continuation not implemented
-
 ## Usage
 
 ```ruby
@@ -23,8 +18,7 @@ Early unofficial Feedly API with no external dependencies
 ```
 
 ## Roadmap
-- [ ] OAuth support
-- [ ] Continuation
+- [ ] Authentication API
 - [ ] OPML API
 - [ ] Markers API
 - [ ] Feeds API
