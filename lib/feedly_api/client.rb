@@ -6,8 +6,8 @@ module FeedlyApi
 
     attr_reader :auth_token
 
-    def initialize(auth_token = nil)
-      @auth_token = auth_token
+    def initialize(access_token=nil)
+      @access_token = access_token
     end
 
     def user_id
@@ -22,11 +22,12 @@ module FeedlyApi
 
     def make_request(path, argv = {})
       url = FeedlyApi::API_ENDPOINT + path + '?'
+
       argv.each do |k, v|
         url << "#{k}=#{v}&"
       end
-      # p url
-      JSON.parse(FeedlyApi.get(url, @auth_token), symbolize_names: true)
+
+      JSON.parse(FeedlyApi.get(url, @access_token), symbolize_names: true)
     end
   end
 end
