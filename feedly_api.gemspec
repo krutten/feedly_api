@@ -1,6 +1,6 @@
 # encoding: utf-8
 $: << File.expand_path('../lib', __FILE__)
-require 'feedly_api'
+require 'feedly_api/version'
 
 Gem::Specification.new do |s|
   s.name        = 'feedly_api'
